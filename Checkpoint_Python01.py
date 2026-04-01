@@ -1,15 +1,23 @@
-secreto = 2
+secreto = 10
 palpite = 0
+tentativas = 0
+limite = 7
 
 while True:
-    palpite != secreto:
-    palpite = int(input("Digite o seu palpite: "))
+    palpite = int(input("Digite o seu palpite do número ' 1 até 100 ' : "))
+    tentativas += 1
 
-    if palpite != secreto:
-        print("Você errou! Tente novamente.")
-
+    if palpite == secreto:
+        print(f"Parabéns! Você acertou número: {secreto}. Após: {tentativas} tentativas")
         break
-      
-    soma = soma + palpite
+    
+    if tentativas >= limite:
+        print(f"Você errou! Atingiu o limite de '7' tentativas.")
+        break
 
-    print(f"Tentativas"{soma}"Parabéns! Você acertou.")
+    if palpite < secreto:
+        print("Você errou! Dica: O número secreto é MAIOR.")
+    else:
+        print("Você errou! Dica: O número secreto é MENOR.")
+
+    continue
