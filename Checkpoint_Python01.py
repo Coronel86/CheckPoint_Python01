@@ -11,11 +11,11 @@ while True:
         print(f"Parabéns! Você acertou número: {secreto}. Após: {tentativas} tentativas")
         break
     
-    if tentativas >= limite:
+    elif tentativas >= limite:
         print(f"Você errou! Atingiu o limite de '7' tentativas.")
         break
 
-    if palpite < secreto:
+    elif palpite < secreto:
         print("Você errou! Dica: O número secreto é MAIOR.")
     else:
         print("Você errou! Dica: O número secreto é MENOR.")
